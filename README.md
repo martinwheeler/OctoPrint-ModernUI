@@ -4,7 +4,7 @@ My personal take on a Modern UI for OctoPrint.
 
 Uses flexbox to control the layout instead of relying on fixed pixels which allows a more responsive UI.
 
-![layout-preview](docs/images/Screen%20Shot%202022-08-07%20at%209.08.14%20pm.png)
+![layout-preview](docs/images/dashboard.png)
 
 ## Todo
 
