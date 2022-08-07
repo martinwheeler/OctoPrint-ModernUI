@@ -8,39 +8,27 @@ authors:
 - Martin Wheeler
 license: AGPLv3
 
-# TODO
-date: today's date in format YYYY-MM-DD, e.g. 2015-04-21
+date: 2022-08-07
 
 homepage: https://github.com/martinwheeler/OctoPrint-ModernUI
 source: https://github.com/martinwheeler/OctoPrint-ModernUI
 archive: https://github.com/martinwheeler/OctoPrint-ModernUI/archive/master.zip
 
 # TODO
-# Set this to true if your plugin uses the dependency_links setup parameter to include
-# library versions not yet published on PyPi. SHOULD ONLY BE USED IF THERE IS NO OTHER OPTION!
-#follow_dependency_links: false
-
-# TODO
 tags:
-- a list
-- of tags
-- that apply
-- to your plugin
-- (take a look at the existing plugins for what makes sense here)
+- responsive
+- style
+- styling
+- theme
+- ui
+- widescreen
 
-# TODO
-# When registering a plugin on plugins.octoprint.org, all screenshots should be uploaded not linked from external sites.
 screenshots:
-- url: url of a screenshot, /assets/img/...
-  alt: alt-text of a screenshot
-  caption: caption of a screenshot
-- url: url of another screenshot, /assets/img/...
-  alt: alt-text of another screenshot
-  caption: caption of another screenshot
-- ...
+- url: /docs/images/dashboard.png
+  alt: Dashboard preview
+  caption: A preview of the dashboard consuming full width
 
-# TODO
-featuredimage: url of a featured image for your plugin, /assets/img/...
+featuredimage: /docs/images/dashboard.png
 
 # TODO
 # You only need the following if your plugin requires specific OctoPrint versions or
@@ -97,5 +85,12 @@ compatibility:
 
 ---
 
-**TODO**: Longer description of your plugin, configuration examples etc. This part will be visible on the page at
-http://plugins.octoprint.org/plugin/ModernUI/
+My personal take on a Modern UI for OctoPrint.
+
+Uses flexbox to control the layout instead of relying on fixed pixels which allows a more responsive UI.
+
+## Todo
+
+- [ ] Mobile responsiveness
+- [ ] Add generic flex to default classnames used in the UI already
+- [ ] Update designs of elements to look more modern I.e. Latest bootstrap/material designs
