@@ -1,0 +1,17 @@
+{
+  "name": "node_src",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node-sass --watch src/sass/index.scss ./octoprint_ModernUI/static/css/index.css --output-style compressed",
+    "build": "node-sass src/sass/index.scss ./octoprint_ModernUI/static/css/index.css --output-style compressed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
