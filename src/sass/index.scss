@@ -1,3 +1,5 @@
+@import "./media-queries.scss";
+
 .octoprint-container {
   width: 100%;
   margin-top: 0;
@@ -5,8 +7,20 @@
   display: flex;
   flex-direction: column;
 
+  @include respond-to(mobile) {
+    [class*="span"] {
+      margin-left: initial;
+    }
+  }
+
   .row {
     display: flex;
+
+    @include respond-to(mobile) {
+      margin-left: initial;
+      flex-direction: column;
+      position: relative;
+    }
   }
 
   #sidebar {
@@ -23,7 +37,8 @@
   }
 
   .tabbable > * {
-    width: 620px;
+    max-width: 620px;
+    width: 100%;
   }
 
   .tabbable #tabs {
@@ -33,10 +48,53 @@
   .tabbable #tabs_content {
     border-left: none;
     border-right: none;
+
+    @include respond-to(mobile) {
+      box-sizing: border-box;
+    }
+  }
+
+  // Default Temperature Plugin
+  #temperature-table {
+    .temperature_offset {
+      @include respond-to(mobile) {
+        display: none;
+      }
+    }
+
+    .temperature_tool {
+      @include respond-to(mobile) {
+        width: 10%;
+      }
+    }
   }
 
   .footer {
     margin: 0 20px 20px 20px;
     height: 21px;
+
+    @include respond-to(mobile) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #footer_links {
+      @include respond-to(mobile) {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 100%;
+        justify-content: space-evenly;
+        margin-top: 8px;
+
+        li {
+          margin: 4px 8px;
+        }
+
+        a {
+          font-size: 16px;
+        }
+      }
+    }
   }
 }

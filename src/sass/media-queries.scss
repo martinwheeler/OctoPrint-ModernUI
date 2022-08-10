@@ -1,0 +1,32 @@
+$breakpoints: (
+  mobile: (
+    max-width: 640px,
+  ),
+  tablet: (
+    max-width: 768px,
+  ),
+  desktop: (
+    max-width: 1024px,
+  ),
+  large: (
+    max-width: 1200px,
+  ),
+);
+
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(
+      type-of($raw-query) == "string",
+      unquote($raw-query),
+      inspect($raw-query)
+    );
+
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}`. Please make sure it is defined.';
+  }
+}

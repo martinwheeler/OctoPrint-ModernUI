@@ -30,7 +30,8 @@ class ModernUIPlugin(octoprint.plugin.SettingsPlugin,
         # Define your plugin's asset files to automatically include in the
         # core UI here.
         return {
-            "css": ["css/index.css"]
+            "css": ["css/index.css"],
+            "js": ["js/index.js"],
         }
 
     # ~~ Softwareupdate hook
